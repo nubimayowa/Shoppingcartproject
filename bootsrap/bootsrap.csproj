@@ -69,9 +69,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="AddToCart.html" />
     <Content Include="brogues.html" />
     <Content Include="caro.html" />
     <Content Include="chealseaBoot.html" />
+    <Content Include="Content\checker.css" />
+    <Content Include="checker.html" />
+    <Content Include="Scripts\checker.js" />
     <Content Include="chukkaBoot.html" />
     <Content Include="Content\album.css" />
     <Content Include="Content\Animate.css" />
@@ -79,6 +83,7 @@
     <Content Include="Content\cover.css" />
     <Content Include="Content\modalshow.css" />
     <Content Include="desertBoot.html" />
+    <Content Include="forcheckout.html" />
     <Content Include="images\at.jpg" />
     <Content Include="images\b.jpg" />
     <Content Include="images\bb.jpg" />
@@ -101,6 +106,8 @@
     <Content Include="modal.html" />
     <Content Include="monkstrap.html" />
     <Content Include="Content\forvalidatingspan.css" />
+    <Content Include="Scripts\checkingnew - Copy.html" />
+    <Content Include="Scripts\checkingnew.html" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <None Include="Web.Debug.config">

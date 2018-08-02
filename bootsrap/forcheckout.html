@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="Content/Animate.css" rel="stylesheet" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+  
+
+    <link href="Content/carousel.css" rel="stylesheet" />
+    <link href="Content/album.css" rel="stylesheet" />
+    <link href="Content/modalshow.css" rel="stylesheet" />
+    <link href="Content/forvalidatingspan.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light" style="border-radius: 20px">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" style="border-radius:25px" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarCollapse">
+                <a class="navbar-brand text-dark btn-outline-primary" style="border-radius:25px" href="index.html" data-toggle="tooltip" data-placement="bottom" title="Welcome"> Scvbby footies</a>
+
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <!--<li class="nav-item ">
+                        <a class="nav-link text-dark btn-outline-primary" style="border-radius:25px" href="/index.html" data-toggle="tooltip" data-placement="bottom" title="Home">HOME <span class="sr-only">(current)</span></a>
+                    </li>-->
+                    <li class="nav-item">
+
+                        <div class="dropdown ">
+                            <a href="#" class="nav-link dropdown-toggle text-dark btn-outline-primary" style="border-radius:25px" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Gallery">
+
+                                GALLERY
+
+
+                            </a>
+
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                <a class="dropdown-item animated bounceInLeft " href="monkstrap.html">MONKSTRAP</a>
+                                <a class="dropdown-item animated bounceInRight" href="loafers.html">LOAFERS</a>
+                                <a class="dropdown-item animated bounceInLeft" href="brogues.html">BROGUES</a>
+                                <a class="dropdown-item animated bounceInRight" href="desertBoot.html">DESERT BOOT</a>
+                                <a class="dropdown-item animated bounceInLeft" href="chealseaBoot.html">CHEALSEA BOOT</a>
+                                <a class="dropdown-item animated bounceInRight" href="chukkaBoot.html">CHUKKA BOOT</a>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark btn-outline-primary mr-5" style="border-radius: 25px" href="#" data-toggle="tooltip" data-placement="bottom" title="Products"> PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark btn-outline-primary " style="border-radius: 25px" href="AddToCart.html" data-toggle="tooltip" data-placement="bottom" title="Shopping Cart">
+                            <i class="fas fa-shopping-cart">
+
+                                CART
+                            </i>
+                        </a>
+                    </li>
+
+                </ul>
+                <!--<form class="form-inline my-5 my-lg-0">
+                    <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search" ">
+                    <button class="btn btn-outline-primary my-2 my-sm-0 mr-lg-5" style="border-radius: 25px" data-toggle="tooltip" data-placement="bottom" title="Click Me!" type="submit">Search</button>
+                </form>-->
+
+                <a class="nav-link btn btn-outline-primary mr-md-2 " style="border-radius: 25px" data-toggle="modal" data-target="#exampleModal" data-placement="bottom" title="Sign In">Sign In</a>
+                <a class="nav-link btn  btn-outline-primary " style="border-radius: 25px" data-toggle="modal" data-target="#exampleeModal" data-placement="bottom" title="Sign Up">Sign Up</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <br />
+    <div class="modal fade" id="exampleModal" tabindex="10" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <form name="myForm" onsubmit="return validateForm()" method="post">
+
+                        <h5 class="modal-title text-center text-primary" id="exampleModalCenterTitle">SIGN IN</h5>
+                        <div class="modal-body">
+
+
+
+                            <div class="form-group ">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+                                <span class="val"></span>
+                            </div>
+                            <div class="form-group ">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" name="psword" id="pwd" placeholder="Enter password">
+                                <span class="val2"></span>
+                            </div>
+                            <div>
+                                <a href="#exampleeModal" data-toggle="modal" data-dismiss="modal">Dont have an Account Sign Up?</a>
+                            </div>
+                            <br />
+                            <div class="checkbox ">
+                                <label><input type="checkbox"> Remember me</label>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleeModal" tabindex="10" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <form name="myForm2" onsubmit="return validateForm2()" method="post">
+                        <h5 class="modal-title text-center text-primary" id="exampleModalCenterTitle">SIGN UP</h5>
+                        <div class="modal-body">
+
+                            <div class="form-group ">
+                                <label for="Name">FirstName:</label>
+                                <input type="text" class="form-control" name="fstname" id="Name" placeholder="Enter FirstName">
+                                <span class="val3"></span>
+                            </div>
+                            <div class="form-group ">
+                                <label for="Name">LastName:</label>
+                                <input type="text" class="form-control" name="lstname" id="Name" placeholder="Enter LastName ">
+                                <span class="val4"></span>
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" name="eml" id="email" placeholder="Enter Email">
+                                <span class="val5"></span>
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" name="psword" id="pwd" placeholder="Enter password">
+                                <span class="val6"></span>
+                            </div>
+                            <div>
+                                <a href="#exampleModal" data-toggle="modal" data-dismiss="modal">Already Have An Account Sign In?</a>
+                            </div>
+                            <br />
+
+
+                            <div class="modal-footer">
+                                <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Total</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            
+                            <td class="col-sm-8 col-md-6 ">
+                                <div class="media mr-3">
+                                  rr  <a class="thumbnail pull-left" href="#"> <img class="media-object" src="images/brown.jpg" style="width: 72px; height: 72px;"> </a>
+                                    <div class="media-body ">
+                                        <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                        <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
+                                        <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-sm-1 col-md-1" style="text-align: center">
+                                <input type="email" class="form-control" id="exampleInputEmail1" value="3">
+                            </td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong>$4.87</strong></td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
+                            <td class="col-sm-1 col-md-1">
+                                <button type="button" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-remove"></span> Remove
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                            <td class="col-md-6">
+                                <div class="media">
+                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                        <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
+                                        <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="col-md-1" style="text-align: center">
+                                <input type="email" class="form-control" id="exampleInputEmail1" value="2">
+                            </td>
+                            <td class="col-md-1 text-center"><strong>$4.99</strong></td>
+                            <td class="col-md-1 text-center"><strong>$9.98</strong></td>
+                            <td class="col-md-1">
+                                <button type="button" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-remove"></span> Remove
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td><h5>Subtotal</h5></td>
+                            <td class="text-right"><h5><strong>$24.59</strong></h5></td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td><h5>Estimated shipping</h5></td>
+                            <td class="text-right"><h5><strong>$6.94</strong></h5></td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td><h3>Total</h3></td>
+                            <td class="text-right"><h3><strong>$31.53</strong></h3></td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>
+                                <button type="button" class="btn btn-default">
+                                    <i class="fas fa-shopping-cart"> Continue Shopping</i>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    Checkout <span class="glyphicon glyphicon-play"></span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid btn btn-dark fixed-bottom ">
+
+        <p class="float-right" data-toggle="tooltip" data-placement="top" title="Go Up"><a href="#">Back to top</a></p>
+        <a href="https://www.instagram.com/nubi_scvbby/"> Follow On Instagram @scvbbywears </a>
+        <br />
+        <a href="https://www.facebook.com/nubi.mayowa"> Follow On Facebook</a>
+        <p class="text-info">Whatsapp or Call on 08166382964</p>
+        <p class="text-muted">Developed by Nubi Mayowa, CEO SCVBBY Footies 2017,2018</p>
+
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,490 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>eCommerce Product Detail - Bootsnipp.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="Content/Animate.css" rel="stylesheet" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="Content/carousel.css" rel="stylesheet" />
+    <link href="Content/album.css" rel="stylesheet" />
+    <link href="Content/modalshow.css" rel="stylesheet" />
+    <link href="Content/forvalidatingspan.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <style type="text/css">
+
+        /*****************globals*************/
+        body {
+            font-family: 'open sans';
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .preview {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 996px) {
+            .preview {
+                margin-bottom: 20px;
+            }
+        }
+
+        .preview-pic {
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+        }
+
+        .preview-thumbnail.nav-tabs {
+            border: none;
+            margin-top: 15px;
+        }
+
+            .preview-thumbnail.nav-tabs li {
+                width: 18%;
+                margin-right: 2.5%;
+            }
+
+                .preview-thumbnail.nav-tabs li img {
+                    max-width: 100%;
+                    display: block;
+                }
+
+                .preview-thumbnail.nav-tabs li a {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .preview-thumbnail.nav-tabs li:last-of-type {
+                    margin-right: 0;
+                }
+
+        .tab-content {
+            overflow: hidden;
+        }
+
+            .tab-content img {
+                width: 100%;
+                -webkit-animation-name: opacity;
+                animation-name: opacity;
+                -webkit-animation-duration: .3s;
+                animation-duration: .3s;
+            }
+
+        .card {
+            margin-top: 50px;
+            background: #eee;
+            padding: 3em;
+            line-height: 1.5em;
+        }
+
+        @media screen and (min-width: 997px) {
+            .wrapper {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+            }
+        }
+
+        .details {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .colors {
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+        }
+
+        .product-title, .price, .sizes, .colors {
+            text-transform: UPPERCASE;
+            font-weight: bold;
+        }
+
+            .checked, .price span {
+                color: #ff9f1a;
+            }
+
+        .product-title, .rating, .product-description, .price, .vote, .sizes {
+            margin-bottom: 15px;
+        }
+
+        .product-title {
+            margin-top: 0;
+        }
+
+        .size {
+            margin-right: 10px;
+        }
+
+            .size:first-of-type {
+                margin-left: 40px;
+            }
+
+        .color {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            height: 2em;
+            width: 2em;
+            border-radius: 2px;
+        }
+
+            .color:first-of-type {
+                margin-left: 20px;
+            }
+
+        .add-to-cart, .like {
+            background: #ff9f1a;
+            padding: 1.2em 1.5em;
+            border: none;
+            text-transform: UPPERCASE;
+            font-weight: bold;
+            color: #fff;
+            -webkit-transition: background .3s ease;
+            transition: background .3s ease;
+        }
+
+            .add-to-cart:hover, .like:hover {
+                background: #b36800;
+                color: #fff;
+            }
+
+        .not-available {
+            text-align: center;
+            line-height: 2em;
+        }
+
+            .not-available:before {
+                font-family: fontawesome;
+                content: "\f00d";
+                color: #fff;
+            }
+
+        .orange {
+            background: #ff9f1a;
+        }
+
+        .green {
+            background: #85ad00;
+        }
+
+        .blue {
+            background: #0076ad;
+        }
+
+        .tooltip-inner {
+            padding: 1.3em;
+        }
+
+        @-webkit-keyframes opacity {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(3);
+                transform: scale(3);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        @keyframes opacity {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(3);
+                transform: scale(3);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        /*# sourceMappingURL=style.css.map */
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light" style="border-radius: 20px">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" style="border-radius:25px" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarCollapse">
+                <a class="navbar-brand text-dark btn-outline-primary" style="border-radius:25px" href="index.html" data-toggle="tooltip" data-placement="bottom" title="Welcome"> Scvbby footies</a>
+
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <!--<li class="nav-item ">
+                        <a class="nav-link text-dark btn-outline-primary" style="border-radius:25px" href="/index.html" data-toggle="tooltip" data-placement="bottom" title="Home">HOME <span class="sr-only">(current)</span></a>
+                    </li>-->
+                    <li class="nav-item">
+
+                        <div class="dropdown ">
+                            <a href="#" class="nav-link dropdown-toggle text-dark btn-outline-primary" style="border-radius:25px" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Gallery">
+
+                                GALLERY
+
+
+                            </a>
+
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                <a class="dropdown-item animated bounceInLeft " href="monkstrap.html">MONKSTRAP</a>
+                                <a class="dropdown-item animated bounceInRight" href="loafers.html">LOAFERS</a>
+                                <a class="dropdown-item animated bounceInLeft" href="brogues.html">BROGUES</a>
+                                <a class="dropdown-item animated bounceInRight" href="desertBoot.html">DESERT BOOT</a>
+                                <a class="dropdown-item animated bounceInLeft" href="chealseaBoot.html">CHEALSEA BOOT</a>
+                                <a class="dropdown-item animated bounceInRight" href="chukkaBoot.html">CHUKKA BOOT</a>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark btn-outline-primary mr-5" style="border-radius: 25px" href="#" data-toggle="tooltip" data-placement="bottom" title="Products"> PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark btn-outline-primary " style="border-radius: 25px" href="AddToCart.html" data-toggle="tooltip" data-placement="bottom" title="Shopping Cart">
+                            <i class="fas fa-shopping-cart">
+
+                                CART
+                            </i>
+                        </a>
+                    </li>
+
+                </ul>
+                <!--<form class="form-inline my-5 my-lg-0">
+                    <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search" ">
+                    <button class="btn btn-outline-primary my-2 my-sm-0 mr-lg-5" style="border-radius: 25px" data-toggle="tooltip" data-placement="bottom" title="Click Me!" type="submit">Search</button>
+                </form>-->
+
+                <a class="nav-link btn btn-outline-primary mr-md-2 " style="border-radius: 25px" data-toggle="modal" data-target="#exampleModal" data-placement="bottom" title="Sign In">Sign In</a>
+                <a class="nav-link btn  btn-outline-primary " style="border-radius: 25px" data-toggle="modal" data-target="#exampleeModal" data-placement="bottom" title="Sign Up">Sign Up</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <br />
+    <div class="modal fade" id="exampleModal" tabindex="10" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <form name="myForm" onsubmit="return validateForm()" method="post">
+
+                        <h5 class="modal-title text-center text-primary" id="exampleModalCenterTitle">SIGN IN</h5>
+                        <div class="modal-body">
+
+
+
+                            <div class="form-group ">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+                                <span class="val"></span>
+                            </div>
+                            <div class="form-group ">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" name="psword" id="pwd" placeholder="Enter password">
+                                <span class="val2"></span>
+                            </div>
+                            <div>
+                                <a href="#exampleeModal" data-toggle="modal" data-dismiss="modal">Dont have an Account Sign Up?</a>
+                            </div>
+                            <br />
+                            <div class="checkbox ">
+                                <label><input type="checkbox"> Remember me</label>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleeModal" tabindex="10" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <form name="myForm2" onsubmit="return validateForm2()" method="post">
+                        <h5 class="modal-title text-center text-primary" id="exampleModalCenterTitle">SIGN UP</h5>
+                        <div class="modal-body">
+
+                            <div class="form-group ">
+                                <label for="Name">FirstName:</label>
+                                <input type="text" class="form-control" name="fstname" id="Name" placeholder="Enter FirstName">
+                                <span class="val3"></span>
+                            </div>
+                            <div class="form-group ">
+                                <label for="Name">LastName:</label>
+                                <input type="text" class="form-control" name="lstname" id="Name" placeholder="Enter LastName ">
+                                <span class="val4"></span>
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" name="eml" id="email" placeholder="Enter Email">
+                                <span class="val5"></span>
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" name="psword" id="pwd" placeholder="Enter password">
+                                <span class="val6"></span>
+                            </div>
+                            <div>
+                                <a href="#exampleModal" data-toggle="modal" data-dismiss="modal">Already Have An Account Sign In?</a>
+                            </div>
+                            <br />
+
+
+                            <div class="modal-footer">
+                                <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        ...
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>-->
+
+
+
+
+
+
+    <div class="container mb-4">
+        <div class="card mr">
+            <div class="container-fliud">
+                <div class="wrapper row">
+                    <div class="preview col-md-6 ">
+
+                        <div class="preview-pic tab-content">
+                            <div class="tab-pane active" id="pic-1"><img src="images/brown.jpg" /></div>
+                            <div class="tab-pane" id="pic-2"><img src="images/brown.jpg" /></div>
+                            <div class="tab-pane" id="pic-3"><img src="images/brown.jpg" /></div>
+                            <div class="tab-pane" id="pic-4"><img src="images/brown.jpg" /></div>
+                            <div class="tab-pane" id="pic-5"><img src="images/brown.jpg" /></div>
+                        </div>
+                        <ul class="preview-thumbnail nav nav-tabs">
+                            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="images/brown.jpg"/></a></li>
+                            <li><a data-target="#pic-2" data-toggle="tab"><img src="images/brown.jpg" /></a></li>
+                            <li><a data-target="#pic-3" data-toggle="tab"><img src="images/brown.jpg" /></a></li>
+                            <li><a data-target="#pic-4" data-toggle="tab"><img src="images/brown.jpg" /></a></li>
+                            <li><a data-target="#pic-5" data-toggle="tab"><img src="images/brown.jpg" /></a></li>
+                        </ul>
+
+                    </div>
+                    <div class="details col-md-6">
+                        <h3 class="product-title">men's shoes fashion</h3>
+                        <div class="rating">
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="review-no">100 reviews</span>
+                        </div>
+                        <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
+                        <h4 class="price">current price: <span>10K</span></h4>
+                        <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+                        <h5 class="sizes">
+                            sizes Available:
+                            <span class="size" data-toggle="tooltip" title="small">s</span>
+                            <span class="size" data-toggle="tooltip" title="medium">m</span>
+                            <span class="size" data-toggle="tooltip" title="large">l</span>
+                            <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                        </h5>
+                        <h5 class="colors">
+                            colors Available:
+                            <span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
+                            <span class="color green"></span>
+                            <span class="color blue"></span>
+                        </h5>
+                        <div class="action">
+                            <button class="add-to-cart btn btn-primary" type="button">add to cart</button>
+                            <button class="like btn btn-primary" type="button">CheckOut</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid btn btn-dark fixed-bottom ">
+
+        <p class="float-right" data-toggle="tooltip" data-placement="top" title="Go Up"><a href="#">Back to top</a></p>
+        <a href="https://www.instagram.com/nubi_scvbby/"> Follow On Instagram @scvbbywears </a>
+        <br />
+        <a href="https://www.facebook.com/nubi.mayowa"> Follow On Facebook</a>
+        <p class="text-info">Whatsapp or Call on 08166382964</p>
+        <p class="text-muted">Developed by Nubi Mayowa, CEO SCVBBY Footies 2017,2018</p>
+
+
+    </footer>
+    <script type="text/javascript">
+
+    </script>
+</body>
+</html>
+
