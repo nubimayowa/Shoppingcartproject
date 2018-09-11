@@ -11,30 +11,108 @@
     <link href="Content/album.css" rel="stylesheet" />-->
 </head>
 
-<body class="text-center alert-dark">
-    <form class="form-signin">
-        <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h1 class="h1 mb-2 font-weight-bold">Welcome To Scvbby Footies</h1>
-        <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
+<body class="text-center text-info bg-dark">
+    
+    <form class="form-signin" id="validatedform">
+        <h2 id="result" ></h2>
+        <img class="mb-1" src="images/LOGO.png" alt="" width="100" height="100">
+       
+        <h1 class="h1 mb-1 font-weight-bold " >Sign Up</h1>
         <label for="inputFirstname" class="sr-only">First Name</label>
         <input type="text" id="inputFirstname" class="form-control" placeholder="First Name" required autofocus>
         <br />
         <label for="inputLastname" class="sr-only">Last Name</label>
-        <input type="text" id="inputLastName" class="form-control" placeholder="Last Name" required autofocus>
+        <input type="text" id="inputLastname" class="form-control" placeholder="Last Name" required autofocus>
         <br />
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        
         <br />
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="inputPassword" class="sr-only">Confirm PassWord</label>
+        <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password" required>
 
-       
+
         <a href="SignIn.html">Already Have An Account Sign In?</a>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="form">Sign Up</button>
+        <p id="test" style="color:red"></p>
         <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
     </form>
     <script src="Scripts/jquery-3.0.0.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
+    <!--<script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery.jgrowl.js"></script>-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#form').on('click', function (e) {
+                e.preventDefault();
+                if (ValidatePasword() && validateEmail()) {
+                debugger;
+                jQuery.support.cors = true;
+                var firstName = $("#inputFirstname").val();
+                var lastName = $("#inputLastname").val();
+                var emailAddress = $("#inputEmail").val();
+                var passWord = $("#inputPassword").val();
+                var confirmpassword = $("#inputConfirmPassword").val();
+
+                $.ajax({
+                    url: 'http://localhost:62103/api/signup',
+                    type: "POST",
+                    dataType: 'json',
+                    data: "firstName=" + firstName + "&lastName=" + lastName + " &emailAddress=" + emailAddress + "&passWord=" + passWord,
+                    crossDomain: true,
+                    success: function (data) {
+                        console.log(data);
+                        alert("Sign Up Successful");
+
+
+                    },
+                    error: function (err) {
+                        alert("Opps Something Went Wrong. Pls Try Again. ");
+                        console.log()
+                    }
+
+                });
+                }
+
+            });
+        })
+        
+        function ValidatePasword() {
+            var passWord = document.getElementById("inputpassword").value;
+            var confirmpassword = document.getElementById("inputConfirmPassword").value;
+            if (passWord != confirmpassword) {
+                alert("passwords dont match, pls try again");
+                return false;
+            }
+            return true;
+
+
+            
+        }
+        function validateEmail() {
+            var email = $("#inputEmail").val();
+            var allowed = /^([a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$)/;
+            let valmail =  re.test(inputEmail)
+            if (valEmail && email !== '') {
+                return true;
+
+
+            }
+            else {
+                $("#result").text(inputEmail + "is not Valid:(");
+                $("#result").css("color", "red");
+
+            }
+            return false;
+
+        }
+        
+
+    </script>
+
+
+
 </body>
 </html>
