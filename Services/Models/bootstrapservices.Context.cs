@@ -20,11 +20,12 @@ namespace Services.Models
         {
         }
     
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)//dbmodel builder is the fluent api
         {
             throw new UnintentionalCodeFirstException();
         }
     
         public virtual DbSet<SignUp> SignUps { get; set; }
+        public virtual DbSet<message> messages { get; set; }  
     }
 }

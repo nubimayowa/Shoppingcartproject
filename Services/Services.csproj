@@ -190,6 +190,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\forContactUsController.cs" />
     <Compile Include="Controllers\forSignUpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -211,7 +212,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bootstrapservices.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\contactus.cs" />
     <Compile Include="Models\logindata.cs" />
+    <Compile Include="Models\message.cs">
+      <DependentUpon>bootstrapservices.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\SignUp.cs">
       <DependentUpon>bootstrapservices.tt</DependentUpon>
     </Compile>

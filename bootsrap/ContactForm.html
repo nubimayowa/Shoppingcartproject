@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <!--<link href="/Content/bootstrap.min.css" rel="stylesheet" />-->
-    <link href="Scripts/formycart.css" rel="stylesheet" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/contacts.css" rel="stylesheet" />
     <link href="Content/carousel.css" rel="stylesheet" />
     <link href="Content/album.css" rel="stylesheet" />
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="Content/Animate.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
@@ -20,14 +20,14 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light" style="border-radius: 20px">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-info">
+        <div class="container-fluid ">
 
             <button class="navbar-toggler" style="border-radius:25px" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarCollapse">
-                <a class="navbar-brand text-dark btn-outline-primary" style="border-radius:25px" href="index.html" data-toggle="tooltip" data-placement="bottom" title="Welcome"> Scvbby footies</a>
+                <a href="index.html"><img src="images/imageedit_1_4929122194.png" data-toggle="tooltip" data-placement="bottom" title="Home" width="50" height="50" class="d-inline-block align-top"></a>
 
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <!--<li class="nav-item ">
@@ -57,11 +57,11 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark btn-outline-primary mr-5" style="border-radius: 25px" href="#" data-toggle="tooltip" data-placement="bottom" title="Products"> PRODUCTS</a>
+                        <a class="nav-link text-dark btn-outline-primary mr-5" style="border-radius: 25px" href="Contactus.html" data-toggle="tooltip" data-placement="bottom" title="Contact Us"> CONTACT US</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark btn-outline-primary " style="border-radius: 25px" data-toggle="tooltip" data-placement="bottom" title="Shopping Cart">
-                            <i class="fas fa-shopping-cart"></i>         Cart
+                            <i class="fas fa-shopping-cart"></i>         CART
                             <span class="badge badge-primary">3</span>
 
 
@@ -69,10 +69,10 @@
                     </li>
 
                 </ul>
-                <!--<form class="form-inline my-5 my-lg-0">
-                    <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search" ">
-                    <button class="btn btn-outline-primary my-2 my-sm-0 mr-lg-5" style="border-radius: 25px" data-toggle="tooltip" data-placement="bottom" title="Click Me!" type="submit">Search</button>
-                </form>-->
+                <form class="form-inline my-5 my-lg-0">
+                    <input class="form-control mr-sm-1" id="myInput" onkeyup="myFunction()" type="text" placeholder="Search for product..." aria-label="Search">
+                    <a class="btn btn-outline-primary my-2 my-sm-0 mr-lg-5" style="border-radius: 25px" data-toggle="tooltip" data-placement="bottom" title="Click Me!">Search</a>
+                </form>
 
                 <a class="nav-link btn btn-outline-primary mr-md-2 " style="border-radius: 25px" data-toggle="modal" data-target="#exampleModal" data-placement="bottom" title="Sign In">Sign In</a>
                 <a class="nav-link btn  btn-outline-primary " style="border-radius: 25px" data-toggle="modal" data-target="#exampleeModal" data-placement="bottom" title="Sign Up">Sign Up</a>
@@ -83,7 +83,7 @@
 
     <br />
     <div class="modal fade" id="exampleModal" tabindex="10" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog " role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <form name="myForm" onsubmit="return validateForm()" method="post">
@@ -95,7 +95,7 @@
 
                             <div class="form-group ">
                                 <label for="email">Email:</label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+                                <input type="email" class="form-control" size="60" name="email" id="email" placeholder="Enter email">
                                 <span class="val"></span>
                             </div>
                             <div class="form-group ">
@@ -125,7 +125,7 @@
         </div>
     </div>
     <div class="modal fade" id="exampleeModal" tabindex="10" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <form name="myForm2" onsubmit="return validateForm2()" method="post">
@@ -134,7 +134,7 @@
 
                             <div class="form-group ">
                                 <label for="Name">FirstName:</label>
-                                <input type="text" class="form-control" name="fstname" id="Name" placeholder="Enter FirstName">
+                                <input type="text" class="form-control" size="60" name="fstname" id="Name" placeholder="Enter FirstName">
                                 <span class="val3"></span>
                             </div>
                             <div class="form-group ">
@@ -173,105 +173,52 @@
         </div>
     </div>
 
-    <div class="container tex">
-        <div class="row">
-            <div class="col-xs-8">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <h5><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</h5>
-                                </div>
-                                <div class="col-xs-6">
-                                    <button type="button" class="btn btn-primary btn-sm btn-block">
-                                        <span class="glyphicon glyphicon-share-alt"></span> Continue shopping
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-xs-2">
-                                <img class="img-responsive" src="http://placehold.it/100x70">
-                            </div>
-                            <div class="col-xs-4">
-                                <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="col-xs-6 text-right">
-                                    <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
-                                </div>
-                                <div class="col-xs-4">
-                                    <input type="text" class="form-control input-sm" value="1">
-                                </div>
-                                <div class="col-xs-2">
-                                    <button type="button" class="btn btn-link btn-xs">
-                                        <span class="glyphicon glyphicon-trash"> </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-xs-2">
-                                <img class="img-responsive" src="http://placehold.it/100x70">
-                            </div>
-                            <div class="col-xs-4">
-                                <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="col-xs-6 text-right">
-                                    <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
-                                </div>
-                                <div class="col-xs-4">
-                                    <input type="text" class="form-control input-sm" value="1">
-                                </div>
-                                <div class="col-xs-2">
-                                    <button type="button" class="btn btn-link btn-xs">
-                                        <span class="glyphicon glyphicon-trash"> </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="text-center">
-                                <div class="col-xs-9">
-                                    <h6 class="text-right">Added items?</h6>
-                                </div>
-                                <div class="col-xs-3">
-                                    <button type="button" class="btn btn-default btn-sm btn-block">
-                                        Update cart
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="row text-center">
-                            <div class="col-xs-9">
-                                <h4 class="text-right">Total <strong>$50.00</strong></h4>
-                            </div>
-                            <div class="col-xs-3">
-                                <button type="button" class="btn btn-success btn-block">
-                                    Checkout
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container contact-form  bg-light">
+        <div class="contact-image">
+            <img src="images/imageedit_1_4929122194.png" alt="rocket_contact" />
         </div>
+        
+            <h3 style="color:black">Drop Us a Message </h3>
+       
+        <form id=" contact-form">
+            <div class="row ">
+               
+                <div class="col-md-6">
+                    
+                        <div class="form-group">
+                            <input type="text"   id="inputName"    name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text"  id="inputEmail" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text"  id="inputPhone"  name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="txtMsg" id="inputMessage"  class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                    </div>
+
+                </div>
+
+            </div>
+            </form>
+
     </div>
+
+
+    <!--</div>-->
     <div class=" container ">
         <div class="row">
             <div class="col-md-4">
                 <h4 style="color:blue">FOLLOW US</h4>
                 <p>
-                    <a href="https://www.instagram.com/nubi_scvbby"<i class="fab fa-instagram fa-5x"></i></a>
-                    <a href="https://www.facebook.com/nubi.mayowa"<i class="fab fa-facebook-square fa-5x"></i></a>
+                    <a href="https://www.instagram.com/nubi_scvbby"><i class="fab fa-instagram fa-5x that"></i></a>
+                    <a href="https://www.facebook.com/nubi.mayowa"><i class="fab fa-facebook-square fa-5x that "></i></a>
                 </p>
 
             </div>
@@ -279,31 +226,68 @@
     </div>
 
 
-    <footer class="container-fluid btn btn-dark ">
+    <footer class="container-fluid btn btn-info mb-3 fixed-bottom">
 
-        <p class="float-right" data-toggle="tooltip" data-placement="top" title="Go Up"><a href="#">Back to top</a></p>
+        <p class="float-right text-dark" data-toggle="tooltip" data-placement="top" title="Go Up"><a href="#">Back to top</a></p>
 
-        <p class="text-info">Whatsapp or Call on 08166382964</p>
-        <p class="text-muted">Developed by Nubi Mayowa, CEO SCVBBY Footies 2017,2018</p>
+        <p class="text-dark">Whatsapp or Call on 08166382964</p>
+        <p>Developed by Nubi Mayowa, CEO SCVBBY Footies 2017,2018</p>
 
 
     </footer>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU%callback=myMap"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <!--<script src="/Scripts/jquery-3.0.0.min.js"></script>
-    <script src="/Scripts/bootstrap.min.js"></script>-->
-   
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
         });
 
     </script>
+   
     <script>
+        $('#contact-form').submit(function (e) {
+            var name = document.getElementById('inputName');
+          var email = document.getElementById('inputEmail');
+            var phone = document.getElementById('inputPhone');
+            var message = document.getElementById('inputMessage');
+
+
+            if (!name.value || !email.value || !phone.value || message.value) {
+                alertify.error("check the entries properly")
+            }
+            else {
+                $.ajax({
+                    url: "https://formspree.io/nubi_mayowa@yahoo.com",
+                    method: "POST",
+                    data: $(this).serialize(),
+                    dataType: "json"
+                });
+                e.preventDefault()
+                $(this).get(0).reset()
+                alertify.success('Message sent')
+            }
+
+
+
+
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </script>
     <script>
@@ -355,27 +339,8 @@
 
 
     </script>
-    <!--<script>
-        $(document).ready(function () {  // for classees reference
-            $(".btn").click(function () {
-                $(this).button('loading');
-            });
-        });
-    </script>-->
-    <!--to hide when u click a partiular paragraph
-    <script>
-        $(document).ready(function () { normal paragraphs
-            $("p").click(function () {
-                $(this).hide();
-            });
-        });
-    </script>-->
-    <!--$("#p1").hover(function(){ enter/ leave a p and localhost says  .....
-    alert("You entered p1!");
-    },
-    function(){
-    alert("Bye! You now leave p1!");
-    });-->
+    
+   
     <script>
         //for inputs blurring an focusing
         $(document).ready(function () {
@@ -397,6 +362,17 @@
 
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            $(".that").mouseover(function () {
+
+                $(this).addClass('animated shake');
+            });
+
+        });
+    </script>
+   
+
     <script>
         $(document).ready(function () {
             $(".cls").mouseover(function () {
@@ -429,6 +405,5 @@
 
         });
     </script>
-
 </body>
-</html>
+    </html>

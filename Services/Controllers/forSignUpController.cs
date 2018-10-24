@@ -9,6 +9,7 @@ using System.Web.Http.Cors;
 
 namespace Services.Controllers
 {
+    [Authorize]
     [EnableCors("*", "*", "*")]
     public class forSignUpController : ApiController
     {
@@ -42,6 +43,7 @@ namespace Services.Controllers
                 throw ex.InnerException;
             }
         }
+        [Authorize]
         [HttpPost, Route ("api/login")]
         public IHttpActionResult postuser (signupData logindata)
         {
@@ -92,6 +94,7 @@ namespace Services.Controllers
                 }
                 return Ok(signupData1 + "sucessfully gotten user");
             }
+            
             
 
         }

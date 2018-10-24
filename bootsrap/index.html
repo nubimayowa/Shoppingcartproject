@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title></title>
     <link href="/Content/bootstrap.min.css" rel="stylesheet" />
-
+    <link href="Content/fornav.css" rel="stylesheet" />
     <link href="Content/carousel.css" rel="stylesheet" />
     <link href="Content/album.css" rel="stylesheet" />
     <link href="Content/Animate.css" rel="stylesheet" />
@@ -15,21 +15,35 @@
     <!--<link href="Content/modalshow.css" rel="stylesheet"/>-->
     <link href="Content/forvalidatingspan.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-   
+    <style>
+        .carousel-inner > .item {
+            height: 10px;
+            width: 150px;
+        }
+
+    </style>
 </head>
+
 <body>
-   
-    
-    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light" style="border-radius: 20px">
-        <div class="container-fluid">
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-info">
+        <div class="container-fluid ">
 
             <button class="navbar-toggler" style="border-radius:25px" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarCollapse">
-                <a class="navbar-brand text-dark btn-outline-primary" style="border-radius:25px" href="index.html" data-toggle="tooltip" data-placement="bottom" title="Welcome"> Scvbby footies</a>
+                <a href="index.html"><img src="images/imageedit_1_4929122194.png" data-toggle="tooltip" data-placement="bottom" title="Home" width="50" height="50" class="d-inline-block align-top"></a>
 
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <!--shifting the nav content to the left you use ml-auto-->
                     <!--<li class="nav-item ">
                         <a class="nav-link text-dark btn-outline-primary" style="border-radius:25px" href="/index.html" data-toggle="tooltip" data-placement="bottom" title="Home">HOME <span class="sr-only">(current)</span></a>
                     </li>-->
@@ -57,11 +71,11 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark btn-outline-primary mr-5" style="border-radius: 25px" href="#" data-toggle="tooltip" data-placement="bottom" title="Products"> PRODUCTS</a>
+                        <a class="nav-link text-dark btn-outline-primary mr-5" style="border-radius: 25px" href="ContactForm.html" data-toggle="tooltip" data-placement="bottom" title="Contact Us"> CONTACT US</a>
                     </li>
-                    <li class="nav-item" > 
+                    <li class="nav-item">
                         <a class="nav-link text-dark btn-outline-primary " style="border-radius: 25px" data-toggle="tooltip" data-placement="bottom" title="Shopping Cart">
-                            <i class="fas fa-shopping-cart"></i>         Cart
+                            <i class="fas fa-shopping-cart"></i>         CART
                             <span class="badge badge-primary">3</span>
 
 
@@ -69,10 +83,10 @@
                     </li>
 
                 </ul>
-                <!--<form class="form-inline my-5 my-lg-0">
-                    <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search" ">
-                    <button class="btn btn-outline-primary my-2 my-sm-0 mr-lg-5" style="border-radius: 25px" data-toggle="tooltip" data-placement="bottom" title="Click Me!" type="submit">Search</button>
-                </form>-->
+                <form class="form-inline my-5 my-lg-0">
+                    <input class="form-control mr-sm-1" id="search" onkeyup="myFunction()" type="text" placeholder="Search for product..." aria-label="Search">
+                    <a class="btn btn-outline-primary my-2 my-sm-0 mr-lg-5" style="border-radius: 25px" data-toggle="tooltip" data-placement="bottom" title="Click Me!">Search</a>
+                </form>
 
                 <a class="nav-link btn btn-outline-primary mr-md-2 " style="border-radius: 25px" data-toggle="modal" data-target="#exampleModal" data-placement="bottom" title="Sign In">Sign In</a>
                 <a class="nav-link btn  btn-outline-primary " style="border-radius: 25px" data-toggle="modal" data-target="#exampleeModal" data-placement="bottom" title="Sign Up">Sign Up</a>
@@ -80,10 +94,10 @@
             </div>
         </div>
     </nav>
- 
+
     <br />
-    <div class="modal fade" id="exampleModal" tabindex="10" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade " id="exampleModal" tabindex="10" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <form name="myForm" onsubmit="return validateForm()" method="post">
@@ -95,12 +109,12 @@
 
                             <div class="form-group ">
                                 <label for="email">Email:</label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+                                <input type="email" class="form-control" size="60" name="email" id="email" placeholder="Enter email">
                                 <span class="val"></span>
                             </div>
                             <div class="form-group ">
                                 <label for="pwd">Password:</label>
-                                <input type="password" class="form-control" name="psword" id="pwd" placeholder="Enter password">
+                                <input type="password" class="form-control" size="60" name="psword" id="pwd" placeholder="Enter password">
                                 <span class="val2"></span>
                             </div>
                             <div>
@@ -125,7 +139,7 @@
         </div>
     </div>
     <div class="modal fade" id="exampleeModal" tabindex="10" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog  " role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <form name="myForm2" onsubmit="return validateForm2()" method="post">
@@ -134,7 +148,7 @@
 
                             <div class="form-group ">
                                 <label for="Name">FirstName:</label>
-                                <input type="text" class="form-control" name="fstname" id="Name" placeholder="Enter FirstName">
+                                <input type="text" class="form-control" size="60" name="fstname" id="Name" placeholder="Enter FirstName">
                                 <span class="val3"></span>
                             </div>
                             <div class="form-group ">
@@ -199,7 +213,7 @@
         <div class="carousel-inner">
             <div class="carousel-item active ">
                 <img class="first-slide  "
-                     src="images/cb.jpeg " height="100" width="100" />=" alt="Monkstrap">
+                     src="images/a.jpeg" height="100" width="100" />=" alt="Monkstrap">
                 <div class="container">
                     <div class="carousel-caption text-sm-right">
                         <h1 class="text-black-50">BLACK SUEDE MONKSTRAP</h1>
@@ -210,19 +224,19 @@
             </div>
             <div class="carousel-item ">
                 <img class="second-slide"
-                     src="images/bro.jpeg" height="100" width="100" />
+                     src="images/bro.jpeg" />
                 alt="Brogues">
                 <div class="container">
                     <div class="carousel-caption text-sm-right">
                         <h1 class="text-black-50">BROGUES WITH A MIXTURE OF BLUE SUEDE AND BROWN LEATHER</h1>
 
-                        <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
+
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="third-slide"
-                     src="images/loake-Black-Cannon-Monk-Strap-Shoes.jpeg" height="100" width="100" />
+                     src="images/loake-Black-Cannon-Monk-Strap-Shoes.jpeg" />
                 alt="Chealsea Boot">
                 <div class="container">
                     <div class="carousel-caption text-sm-right">
@@ -234,7 +248,7 @@
             </div>
             <div class="carousel-item">
                 <img class="second-slide"
-                     src="images/c.jpeg" height="100" width="100" />
+                     src="images/c.jpeg" />
 
                 alt="Chukka Boot">
                 <div class="container">
@@ -265,354 +279,399 @@
         <div id="cart">
             <span class="empty">No items in cart.</span>
         </div>-->
-        <div class="album py-5 ">
-            <div class="container">
+    <div class="album py-5 ">
+        <div class="container">
 
-                <div class="row">
-                    <div class="col-md-4 animated flipInY">
-                        <div class="card mb-4 box-shadow " data-toggle="tooltip" data-placement="bottom" title="Brown Suede Brogues">
-
-
-                            <img src="images/brown.jpg " class="card-img-bottom" height="200" width="150" />
+            <div class="row">
+                <div class="col-md-4 animated shake">
+                    <div class="card mb-4 box-shadow " data-toggle="tooltip" data-placement="bottom" title="Brown Suede Brogues">
 
 
-                            <div class="card-body">
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-
-                                        <a href="AddToCart.html" type="button" class="btn btn-sm btn-outline-primary mr-md-2 ">Preview</a>
-                                        <a href="forcheckout.html" type="button" class="btn btn-sm btn-outline-primary mr-md-2 "><i class="fas fa-shopping-cart"></i>Add To Cart</a>
+                        <img src="images/brown.jpg " class="card-img-bottom" height="200" width="150" />
 
 
+                        <div class="card-body">
 
-                                    </div>
-                                    <small class="text-muted">10k</small>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+
+                                    <a href="AddToCart.html" type="button" class="btn btn-sm btn-outline-primary mr-md-2 ">Preview</a>
+                                    <a href="forcheckout.html" type="button" class="btn btn-sm btn-outline-primary mr-md-2 "><i class="fas fa-shopping-cart"></i>Add To Cart</a>
+
+
+
                                 </div>
+                                <small class="text-muted">10k</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 animated flipInY ">
-                        <div class="card mb-4 box-shadow " data-toggle="tooltip" data-placement="bottom" title="Green Suede Brogues">
-                            <img src="images/gbr.jpg" class="card-img-bottom" height="200" width="150" />
+                </div>
+                <div class="col-md-4 animated shake ">
+                    <div class="card mb-4 box-shadow " data-toggle="tooltip" data-placement="bottom" title="Green Suede Brogues">
+                        <img src="images/gbr.jpg" class="card-img-bottom" height="200" width="150" />
 
-                            <div class="card-body">
+                        <div class="card-body">
 
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="images/gbr.jpg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="images/gbr.jpg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
 
-                                    </div>
-                                    <small class="text-muted">11k</small>
                                 </div>
+                                <small class="text-muted">11k</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 animated flipInY">
-                        <div class="card mb-4 box-shadow" data-toggle="tooltip" data-placement="bottom" title="Blue Suede Brogues">
-                            <a target="_blank" href="images/bbr.jpg">
-                                <img src="images/bbr.jpg" class="card-img-bottom" height="200" width="150" />
-                            </a>
+                </div>
+                <div class="col-md-4 animated flipInY">
+                    <div class="card mb-4 box-shadow" data-toggle="tooltip" data-placement="bottom" title="Blue Suede Brogues">
+                        <a target="_blank" href="images/bbr.jpg">
+                            <img src="images/bbr.jpg" class="card-img-bottom" height="200" width="150" />
+                        </a>
 
-                            <div class="card-body">
+                        <div class="card-body">
 
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <!--<a href="images/bbr.jpg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>-->
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <!--<a href="images/bbr.jpg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>-->
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
 
-                                    </div>
-                                    <small class="text-muted"> 9.5k</small>
                                 </div>
+                                <small class="text-muted"> 9.5k</small>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-md-4 animated flipInY">
-                        <div class="card mb-4 box-shadow" data-toggle="tooltip" data-placement="bottom" title="Leather Brown Monkstrap">
-                            <img src="images/ms3.jpeg" class="card-img-bottom" height="200" width="150" />
+                <div class="col-md-4 animated flipInY">
+                    <div class="card mb-4 box-shadow" data-toggle="tooltip" data-placement="bottom" title="Leather Brown Monkstrap">
+                        <img src="images/ms3.jpeg" class="card-img-bottom" height="200" width="150" />
 
-                            <div class="card-body">
+                        <div class="card-body">
 
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="images/ms3.jpeg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="images/ms3.jpeg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
 
-                                    </div>
-                                    <small class="text-muted"> 11k</small>
                                 </div>
+                                <small class="text-muted"> 11k</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 animated flipInY">
-                        <div class="card mb-4 box-shadow" data-toggle="tooltip" data-placement="bottom" title="Blue Suede Monkstrap">
-                            <img src="images/ms2.jpeg" class="card-img-bottom" height="200" width="150" />
+                </div>
+                <div class="col-md-4 animated shake">
+                    <div class="card mb-4 box-shadow" data-toggle="tooltip" data-placement="bottom" title="Blue Suede Monkstrap">
+                        <img src="images/ms2.jpeg" class="card-img-bottom" height="200" width="150" />
 
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="images/ms2.jpeg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="images/ms2.jpeg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
 
-                                    </div>
-
-                                    <small class="text-muted"> 12k</small>
                                 </div>
+
+                                <small class="text-muted"> 12k</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 animated flipInY">
-                        <div class="card mb-4 box-shadow" data-toggle="tooltip" data-placement="bottom" title=" Black Suede with 3Monkstraps">
-                            <img src="images/ms1.jpeg" class="card-img-bottom" height="200" width="150" />
+                </div>
+                <div class="col-md-4 animated flipInY">
+                    <div class="card mb-4 box-shadow" data-toggle="tooltip" data-placement="bottom" title=" Black Suede with 3Monkstraps">
+                        <img src="images/ms1.jpeg" class="card-img-bottom" height="200" width="150" />
 
-                            <div class="card-body">
+                        <div class="card-body">
 
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="images/ms1.jpeg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
-
-                                    </div>
-                                    <small class="text-muted">15k</small>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="images/ms1.jpeg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
 
                                 </div>
+                                <small class="text-muted">15k</small>
+
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-md-4 animated flipInY">
-                        <div class="card mb-4 box-shadow" data-toggle="tooltip" data-placement="bottom" title="Brown Leather Chealsea Boot">
+                <div class="col-md-4 animated shake">
+                    <div class="card mb-4 box-shadow" data-toggle="tooltip" data-placement="bottom" title="Brown Leather Chealsea Boot">
 
-                            <img src="images/br.jpg" class="card-img-bottom " height="200" width="150" />
-                            <!--<img class="card-img-bottom" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">-->
-                            <div class="card-body">
+                        <img src="images/br.jpg" class="card-img-bottom " height="200" width="150" />
+                        <!--<img class="card-img-bottom" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">-->
+                        <div class="card-body">
 
-                                <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-                                <div class="d-flex justify-content-between align-items-end">
-                                    <div class="btn-group ">
-                                        <a href="images/br.jpg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
-
-                                    </div>
-                                    <small class="text-muted">14k</small>
+                            <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div class="btn-group ">
+                                    <a href="images/br.jpg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
 
                                 </div>
+                                <small class="text-muted">14k</small>
+
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 animated flipInY">
-                        <div class="card mb-4 box-shadow cls" data-toggle="tooltip" data-placement="bottom" title="Grey Suede Chealsea Boot">
-                            <img src="images/grey-boot-double-side_2048x2048.png" class="card-img-bottom" height="200" width="150" />
+                </div>
+                <div class="col-md-4 animated shake">
+                    <div class="card mb-4 box-shadow cls" data-toggle="tooltip" data-placement="bottom" title="Grey Suede Chealsea Boot">
+                        <img src="images/grey-boot-double-side_2048x2048.png" class="card-img-bottom" height="200" width="150" />
 
-                            <div class="card-body">
+                        <div class="card-body">
 
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="images/grey-boot-double-side_2048x2048.png" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="images/grey-boot-double-side_2048x2048.png" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Add To Chart</button>
 
-                                    </div>
-                                    <small class="text-muted">14k</small>
                                 </div>
+                                <small class="text-muted">14k</small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 animated flipInY">
-                        <div class="card mb-4 box-shadow try" id="img" data-toggle="tooltip" data-placement="bottom" title=" Blacck Suede Chealsea Boot">
+                </div>
+                <div class="col-md-4  WithoutDelay">
+                    <div class="card mb-4 box-shadow " id="img" data-toggle="tooltip" data-placement="bottom" title=" Black Suede Chealsea Boot">
 
-                            <img src="images/bb.jpg" class="card-img-bottom" id="myImg" height="200" width="150" />
+                        <img src="images/bb.jpg" class="card-img-bottom" id="myImg" height="200" width="150" />
 
-                            <div class="card-body">
+                        <div class="card-body">
 
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group ">
-                                        <a href="images/bb.jpg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group ">
+                                    <a href="images/bb.jpg" type="button" class="btn btn-sm btn-outline-secondary mr-md-2 ">Preview</a>
 
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">  Add To Chart</button>
-                                        <div id="myModal" class="modal" role="dialog">
-                                            <span class="close">&times;</span>
-                                            <img class="modal-content" id="img01">
-                                            <div id="caption"></div>
-                                        </div>
-
-
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">  Add To Chart</button>
+                                    <div id="myModal" class="modal" role="dialog">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="img01">
+                                        <div id="caption"></div>
                                     </div>
-                                    <small class="text-muted">13.5k</small>
-                                </div>
-                            </div>
 
+
+                                </div>
+                                <small class="text-muted">13.5k</small>
+                            </div>
                         </div>
-                        <p class="text-info text-center">shop with us</p>
 
                     </div>
+                    <p class="text-info text-center">shop with us</p>
 
                 </div>
+
+
+
+
+
             </div>
         </div>
-        <!--</div>-->
-    <div class=" container ">
+    </div>
+    <!--<img src="images/bbbl.jpg" style="font-size:11pt" class="WithoutDelay" />-->
+    <!--</div>-->
+    <div class=" container " style="margin-bottom:100px">
         <div class="row">
             <div class="col-md-4">
                 <h4 style="color:blue">FOLLOW US</h4>
-                <p><a href="https://www.instagram.com/nubi_scvbby"<i class="fab fa-instagram fa-5x"></i></a>
-                <a href="https://www.facebook.com/nubi.mayowa"<i class="fab fa-facebook-square fa-5x"></i></a></p>
-              
+                <p>
+                    <a href="https://www.instagram.com/nubi_scvbby"<i class="fab fa-instagram fa-5x that"></i></a>
+                    <a href="https://www.facebook.com/nubi.mayowa"<i class="fab fa-facebook-square fa-5x that "></i></a>
+                </p>
+
             </div>
         </div>
     </div>
 
 
-        <footer class="container-fluid btn btn-dark ">
+    <footer class="container-fluid btn btn-info fixed-bottom">
 
-            <p class="float-right" data-toggle="tooltip" data-placement="top" title="Go Up"><a href="#">Back to top</a></p>
-           
-            <p class="text-info">Whatsapp or Call on 08166382964</p>
-            <p class="text-muted">Developed by Nubi Mayowa, CEO SCVBBY Footies 2017,2018</p>
+        <p class="float-right text-dark" data-toggle="tooltip" data-placement="top" title="Go Up"><a href="#">Back to top</a></p>
 
-
-        </footer>
+        <p class="text-dark">Whatsapp or Call on 08166382964</p>
+        <p>Developed by Nubi Mayowa, CEO SCVBBY Footies 2017,2018</p>
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-        <!--<script src="/Scripts/jquery-3.0.0.min.js"></script>
-        <script src="/Scripts/bootstrap.min.js"></script>-->
-        <script>
-            $(document).ready(function () {
-                $('[data-toggle="tooltip"]').tooltip();
-            });
+    </footer>
 
-        </script>
-        <script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU%callback=myMap"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <!--<script src="/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>-->
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
 
-        </script>
-        <script>
-
-            function validateForm() {
-                var x = document.forms["myForm"]["email"].value;
-                if (x == "") {
-                    $('.val').html("The Email field is required");
-                    return false;
-                }
-                var y = document.forms["myForm"]["psword"].value;
-                if (y == "") {
-                    $('.val2').html("The PassWord field is required ");
-                    return false;
-                }
+    </script>
+    
 
 
+    <script>
+        let $search = $('#search');
+        let $imgs = $('img')
 
+        $search.keyup(event => {
+            let value = $search.val().toLowerCase();
+            $imgs.show();
+            if (value !== '') {
+                $imgs.not('[title*="' + value + '"]').hide();
             }
+        });
 
-        </script>
-        <script>
-            function validateForm2() {
-                var x = document.forms["myForm2"]["fstname"].value;
-                if (x == "") {
-                    $('.val3').html("The FirstName field is required");
-                    return false;
+    </script>
+    <script>
 
-                }
-                var y = document.forms["myForm2"]["lstname"].value;
-                if (y == "") {
-                    $(".val4").html("The Lastname field is required");
-                    return false;
-                }
-
-                var z = document.forms["myForm2"]["eml"].value;
-                if (z == "") {
-                    $(".val5").html("The Email field is required");
-                    return false;
-                }
-
-                var a = document.forms["myForm2"]["psword"].value;
-                if (a == "") {
-                    $('.val6').html("The Password field is required");
-                    return false;
-                }
+        function validateForm() {
+            var x = document.forms["myForm"]["email"].value;
+            if (x == "") {
+                $('.val').html("The Email field is required");
+                return false;
+            }
+            var y = document.forms["myForm"]["psword"].value;
+            if (y == "") {
+                $('.val2').html("The PassWord field is required ");
+                return false;
             }
 
 
 
-        </script>
-        <!--<script>
-            $(document).ready(function () {  // for classees reference
-                $(".btn").click(function () {
-                    $(this).button('loading');
+        }
+
+    </script>
+    <script>
+        function validateForm2() {
+            var x = document.forms["myForm2"]["fstname"].value;
+            if (x == "") {
+                $('.val3').html("The FirstName field is required");
+                return false;
+
+            }
+            var y = document.forms["myForm2"]["lstname"].value;
+            if (y == "") {
+                $(".val4").html("The Lastname field is required");
+                return false;
+            }
+
+            var z = document.forms["myForm2"]["eml"].value;
+            if (z == "") {
+                $(".val5").html("The Email field is required");
+                return false;
+            }
+
+            var a = document.forms["myForm2"]["psword"].value;
+            if (a == "") {
+                $('.val6').html("The Password field is required");
+                return false;
+            }
+        }
+
+
+
+    </script>
+    <!--<script>
+        $(document).ready(function () {  // for classees reference
+            $(".btn").click(function () {
+                $(this).button('loading');
+            });
+        });
+    </script>-->
+    <!--to hide when u click a partiular paragraph
+    <script>
+        $(document).ready(function () { normal paragraphs
+            $("p").click(function () {
+                $(this).hide();
+            });
+        });
+    </script>-->
+    <!--$("#p1").hover(function(){ enter/ leave a p and localhost says  .....
+    alert("You entered p1!");
+    },
+    function(){
+    alert("Bye! You now leave p1!");
+    });-->
+    <script>
+        //for inputs blurring an focusing
+        $(document).ready(function () {
+
+            $("input").focus(function () {
+                $(this).css("background-color", "#cccccc");
+            });
+
+            $("input").blur(function () {
+                $(this).css("background-color", "#fff");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".try").mouseover(function () {
+
+                $(this).addClass('animated bounceInLeft');
+            });
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".that").mouseover(function () {
+
+                $(this).addClass('animated shake');
+            });
+
+        });
+    </script>
+    <!--<script>
+        $(document).ready(function () {
+            $(".album").mouseenter(function () {
+                $(this).addClass('animated bounceInRight');
+            })
+        })
+    </script>-->
+    <script>
+
+        $(document).ready(function () {
+            $('.WithoutDelay').mouseenter(function () {
+                $(this).animate({
+                    height: '+=50px',
+                    width: '+=50px'
                 });
             });
-        </script>-->
-        <!--to hide when u click a partiular paragraph
-        <script>
-            $(document).ready(function () { normal paragraphs
-                $("p").click(function () {
-                    $(this).hide();
+            $('.WithoutDelay').mouseleave(function () {
+                $(this).animate({
+                    height: '-=50px',
+                    width: '-=50px'
                 });
             });
-        </script>-->
-        <!--$("#p1").hover(function(){ enter/ leave a p and localhost says  .....
-        alert("You entered p1!");
-        },
-        function(){
-        alert("Bye! You now leave p1!");
-        });-->
-        <script>
-            //for inputs blurring an focusing
-            $(document).ready(function () {
-                $("input").focus(function () {
-                    $(this).css("background-color", "#cccccc");
-                });
-                $("input").blur(function () {
-                    $(this).css("background-color", "#ffffff");
-                });
-            });
-        </script>
+    </script>
+    <script>
+        var modal = document.getElementById('myModal');
 
-        <script>
-            $(document).ready(function () {
-                $(".try").mouseover(function () {
 
-                    $(this).addClass('animated bounceInLeft');
-                });
+        var span = document.getElementsByClassName("close")[0];
 
-            });
-        </script>
-        <script>
-            $(document).ready(function () {
-                $(".cls").mouseover(function () {
-                    $(this).addClass('animated bounceInRight');
-
-                });
-            });
-        </script>
-        <script>
-            var modal = document.getElementById('myModal');
-
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        $('.addi').on('click', function () {
+            var a = $('#myImg img').attr('src');
+            $('#caption img').attr(a);
 
             var span = document.getElementsByClassName("close")[0];
 
             // When the user clicks on <span> (x), close the modal
             span.onclick = function () {
                 modal.style.display = "none";
+
             }
-            $('.addi').on('click', function () {
-                var a = $('#myImg img').attr('src');
-                $('#caption img').attr(a);
 
-                var span = document.getElementsByClassName("close")[0];
+        });
+    </script>
 
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function () {
-                    modal.style.display = "none";
-
-                }
-
-            });
-        </script>
-        <!-- <script src="Scripts/mayowa.js"></script>-->
 </body>
 </html> 
 

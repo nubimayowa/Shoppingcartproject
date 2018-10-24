@@ -5,12 +5,12 @@ using System.Web;
 
 namespace Services.Models
 {
-    public class signupData 
+    public class contactus
     {
-        
-        public string firstName { get; set; }
-        public string lastName { get; set; }
+        public string userName { get; set; }
         public string emailAddress { get; set; }
-        public string passWord { get; set; }
+        public string phoneNumber { get; set; }
+        public string message { get; set; }
+
     }
 }

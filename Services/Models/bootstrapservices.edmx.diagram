@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="33c2d5ec5ba3474a99667168d11d5ac6" Name="Diagram1">
         <EntityTypeShape EntityType="MayowaaModel.SignUp" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayowaaModel.message" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

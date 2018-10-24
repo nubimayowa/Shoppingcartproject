@@ -6,30 +6,29 @@
     <link href="/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/Animate.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Lato" >
     <link href="Content/carousel.css" rel="stylesheet" />
     <link href="Content/album.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light ">
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-info ">
         <div class="container-fluid">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarCollapse">
-                <a class="navbar-brand text-dark" href="index.html" data-toggle="tooltip" data-placement="bottom" title="Welcome"> Scvbby footies</a>
+                <a href="index.html"><img src="images/imageedit_1_4929122194.png" data-toggle="tooltip" data-placement="bottom" title="Home" width="50" height="50" class="d-inline-block align-top"></a>
+
 
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item ">
-                        <a class="nav-link text-dark" href="/index.html" data-toggle="tooltip" data-placement="bottom" title="Home">HOME <span class="sr-only">(current)</span></a>
-                    </li>
+
                     <li class="nav-item">
 
                         <div class="dropdown ">
-                            <a href="#" class="nav-link dropdown-toggle text-dark" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Gallery">
+                            <a href="#" class="nav-link dropdown-toggle text-dark btn-outline-primary" style="border-radius: 25px" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Gallery">
 
                                 GALLERY
 
@@ -49,11 +48,15 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark " href="#" data-toggle="tooltip" data-placement="bottom" title="Products"> PRODUCTS</a>
+                        <a class="nav-link text-dark btn-outline-primary mr-5"  style="border-radius:25px"href="#" data-toggle="tooltip" data-placement="bottom" title="Products"> ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark " href="#" data-toggle="tooltip" data-placement="bottom" title="Pricing"> PRICING</a>
-                    </li>
+                        <a class="nav-link text-dark btn-outline-primary " style="border-radius: 25px" data-toggle="tooltip" data-placement="bottom" title="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>         Cart
+                            <span class="badge badge-primary">3</span>
+                        </a>
+
+
                 </ul>
                 <form class="form-inline my-5 my-lg-0">
                     <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search" ">
@@ -70,7 +73,7 @@
 
     <br />
     <div class="modal fade" id="exampleModal" tabindex="10" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <form>
@@ -79,9 +82,9 @@
 
 
 
-                            <div class="form-group ">
+                            <div class="form-group">
                                 <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                <input type="email" class="form-control" size="60" id="email" placeholder="Enter email">
                             </div>
                             <div class="form-group ">
                                 <label for="pwd">Password:</label>
@@ -108,7 +111,7 @@
         </div>
     </div>
     <div class="modal fade" id="exampleeModal" tabindex="10" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog " role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <form>
@@ -117,7 +120,7 @@
 
                             <div class="form-group ">
                                 <label for="Name">FirstName:</label>
-                                <input type="text" class="form-control" id="Name" placeholder="Enter FirstName">
+                                <input type="text" class="form-control" size="60" id="Name" placeholder="Enter FirstName">
                             </div>
                             <div class="form-group ">
                                 <label for="Name">LastName:</label>
@@ -152,7 +155,7 @@
         </div>
     </div>
 
-    <div class="album py-5 bg-light">
+    <div class="album py-5 ">
         <div class="container">
 
             <div class="row">
@@ -356,12 +359,27 @@
             </div>
         </div>
     </div>
-    <footer class="container-fluid btn btn-dark ">
+    <!--<div class="mapouter"><div class="gmap_canvas"><iframe width="1500" height="872" id="gmap_canvas" src="https://maps.google.com/maps?q=sidmach%20technology%2C%20alausa%20ikeja.lagos%20state.%20Nigeria&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net"></a></div>
+    <style>
+        .mapouter {
+            text-align: right;
+            height: 872px;
+            width: 1500px;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 872px;
+            width: 1500px;
+        }
+    </style></div>-->
+    <footer class="container-fluid btn btn-info ">
 
         <p class="float-right" data-toggle="tooltip" data-placement="top" title="Go Up"><a href="#">Back to top</a></p>
        
-        <p class="text-info">Whatsapp or Call on 08166382964</p>
-        <p class="text-muted">Developed by Nubi Mayowa, CEO SCVBBY Footies 2017,2018 </p>
+        <p class="text-dark">Whatsapp or Call on 08166382964</p>
+        <p >Developed by Nubi Mayowa, CEO SCVBBY Footies 2017,2018 </p>
 
 
     </footer>
@@ -370,6 +388,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <!--<script src="/Scripts/jquery-3.0.0.min.js"></script>
     <script src="/Scripts/bootstrap.min.js"></script>-->
+   
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
@@ -386,27 +405,7 @@
             });
         });
     </script>
-    <!--<script>
-        $(document).ready(function () {  // for classees reference
-            $(".btn").click(function () {
-                $(this).button('loading');
-            });
-        });
-    </script>-->
-    <!--to hide when u click a partiular paragraph
-    <script>
-        $(document).ready(function () { normal paragraphs
-            $("p").click(function () {
-                $(this).hide();
-            });
-        });
-    </script>-->
-    <!--$("#p1").hover(function(){ enter/ leave a p and localhost says  .....
-    alert("You entered p1!");
-    },
-    function(){
-    alert("Bye! You now leave p1!");
-    });-->
+ 
     <script>
         //for inputs blurring an focusing
         $(document).ready(function () {

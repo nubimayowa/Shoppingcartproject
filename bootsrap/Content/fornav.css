@@ -1,0 +1,25 @@
+﻿@media all and (max-width: 600px) {
+
+
+    .container > li {
+        flex-basis: 100%
+        
+    }
+
+    .search {
+        order: 4;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
