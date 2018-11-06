@@ -9,7 +9,7 @@ using System.Web.Http.Cors;
 
 namespace Services.Controllers
 {
-    [Authorize]
+   
     [EnableCors("*", "*", "*")]
     public class forSignUpController : ApiController
     {
@@ -29,13 +29,20 @@ namespace Services.Controllers
                             lastName = signupData.lastName,
                             passWord = signupData.passWord
                         });
+                       
+                      
+
                         ctx.SaveChanges();
                     }
                     return Ok(HttpStatusCode.Created);
-                }
+
+                   
+                }  
                 else
+
                 {
-                    return BadRequest("Model State Not Valid");
+                    return Ok(ModelState);
+                   
                 }
             }
             catch(Exception  ex)
@@ -59,7 +66,7 @@ namespace Services.Controllers
                                 .SingleOrDefault();
                             if (response != null)
                             {
-                                return Ok(response);
+                                return Ok("Successfully created");
                             }
                         else
                         {
@@ -77,7 +84,7 @@ namespace Services.Controllers
             }
             else
             {
-                return BadRequest(ModelState);
+                return Ok(ModelState);
             }
         }
 
@@ -127,6 +134,8 @@ namespace Services.Controllers
             }
             return Ok ("deleted successfully");
         }
+
+
 
         [HttpPut, Route ("api/putuserbyid/{id}")]
         public IHttpActionResult Put(int id,signupData signupData)

@@ -14,7 +14,7 @@
 <body class="text-center text-info bg-dark">
     
     <form class="form-signin" id="validatedform">
-        <h2 id="result" ></h2>
+      
         <img src="images/imageedit_1_4929122194.png" width="200" height="200">
        
         <h1 class="h1 mb-1 font-italic " >Sign Up</h1>
@@ -48,7 +48,7 @@
         $(document).ready(function () {
             $('#form').on('click', function (e) {
                 e.preventDefault();
-                if (ValidatePasword() && validateEmail()) {
+                if (ValidatePasword() && validateEmail() && validatePhonenumber() ){
                 debugger;
                 jQuery.support.cors = true;
                 var firstName = $("#inputFirstname").val();
@@ -65,6 +65,7 @@
                     crossDomain: true,
                     success: function (data) {
                         console.log(data);
+                        
                         alert("Sign Up Successful, You can now Login");
 
 
@@ -102,12 +103,24 @@
 
             }
             else {
-                $("#result").text(inputEmail + "is not Valid:(");
-                $("#result").css("color", "red");
+                alert("check your email properly");s
+                //$("#result").text(inputEmail + "is not Valid:(");
+                //$("#result").css("color", "red");
 
             }
             return false;
 
+        }
+        function validatePhonenumber() {
+            if (validatedform.phone.value == "") {
+                alert("please enter your phonenumber");
+                validatedform.phone.focus();
+                return false;
+            }
+        }
+        if (isNaN(validatedform.phone.value)) {
+            alert("invalid phone number");
+            validatedform.phone.focus  
         }
         
 
@@ -117,3 +130,4 @@
 
 </body>
 </html>
+ 

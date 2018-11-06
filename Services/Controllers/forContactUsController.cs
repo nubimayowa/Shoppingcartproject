@@ -77,6 +77,7 @@ namespace Services.Controllers
 
 
         }
+
         [HttpDelete, Route("api/messageofuserbyid/{id}")]
         public IHttpActionResult Delete(int id)
         {
@@ -92,5 +93,5 @@ namespace Services.Controllers
         }
 
         
-    }
+    }   //first or default, tolist
 }
