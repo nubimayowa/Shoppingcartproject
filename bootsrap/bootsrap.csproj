@@ -87,6 +87,8 @@
     <Content Include="brogues.html" />
     <Content Include="caro.html" />
     <Content Include="Cart.html" />
+    <Content Include="RegisterCustomers.html" />
+    <Content Include="LoginForCustomers.html" />
     <Content Include="chealseaBoot.html" />
     <Content Include="ContactForm.html" />
     <Content Include="Content\contacts.css" />
@@ -101,6 +103,7 @@
     <Content Include="css\alertify.min.css" />
     <Content Include="css\alertify.rtl.css" />
     <Content Include="css\alertify.rtl.min.css" />
+    <Content Include="css\app.css" />
     <Content Include="css\themes\bootstrap.css" />
     <Content Include="css\themes\bootstrap.min.css" />
     <Content Include="css\themes\bootstrap.rtl.css" />
@@ -113,12 +116,17 @@
     <Content Include="css\themes\semantic.min.css" />
     <Content Include="css\themes\semantic.rtl.css" />
     <Content Include="css\themes\semantic.rtl.min.css" />
+    <Content Include="css\themes\themify-icons.css" />
     <Content Include="getter.txt" />
     <Content Include="images\a.jpeg" />
     <Content Include="images\bp.jpg" />
     <Content Include="images\imageedit_1_4929122194.png" />
     <Content Include="images\LOGO.png" />
     <Content Include="images\nn.jpg" />
+    <Content Include="images\signup.jpg" />
+    <Content Include="Scripts\loginjs.js" />
+    <Content Include="Scripts\register.js" />
+    <Content Include="Scripts\login.css" />
     <Content Include="register.html" />
     <Content Include="Scripts\alertify.js" />
     <Content Include="Scripts\alertify.min.js" />
@@ -204,6 +212,7 @@
     <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
     <Content Include="Scripts\jquery.jgrowl.min.js" />
     <Content Include="Scripts\mayowa.js" />
+    <Content Include="Scripts\newlogin.css" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
@@ -214,6 +223,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\validation.js" />
     <Content Include="SignIn.html" />
     <Content Include="SignUp.html" />
     <Content Include="Web.config" />

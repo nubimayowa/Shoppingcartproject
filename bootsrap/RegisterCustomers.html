@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Customer Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <!-- global css -->
+    <link href="css/app.css" rel="stylesheet">
+    <!-- end of global css -->
+    <!--page level css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet"/>
+    <link href="vendors/iCheck/css/all.css" rel="stylesheet">
+  
+    <link href="Scripts/login.css" rel="stylesheet" />
+    <!--end of page level css-->
+</head>
+
+<body id="sign-up">
+    <!--<div class="preloader">
+        <div class="loader_img"><img src="img/loader.gif" alt="loading..." height="64" width="64"></div>
+    </div>-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 login-form">
+                <div class="panel-header">
+                    <h2 class="text-center">
+                        <img src="images/imageedit_1_4929122194.png" width="200" height="200" alt="Logo">
+                    </h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <form action="cclogin.html" id="authentication" method="post" class="signup_validator">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="first" class="sr-only">First Name</label>
+                                    <input type="text" class="form-control  form-control-lg" id="first_name" name="first_name"
+                                           placeholder="First name">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="last" class="sr-only">Last Name</label>
+                                    <input type="text" class="form-control  form-control-lg" id="last_name" name="last_name"
+                                           placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="email" class="sr-only"> E-mail</label>
+                                    <input type="text" class="form-control  form-control-lg" id="email" name="email"
+                                           placeholder="E-mail">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="password" class="sr-only">Password</label>
+                                    <input type="password" class="form-control form-control-lg" id="password"
+                                           name="password" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="confirm-password" class="sr-only">Password</label>
+                                    <input type="password" class="form-control form-control-lg" id="password_confirm"
+                                           name="password_confirm" placeholder="Confirm Password">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="terms">
+                                        <input type="checkbox" name="terms" id="terms">&nbsp; I accept the <a href="javascript:void(0)">terms &amp; Conditions</a>
+                                    </label>
+                                </div>
+                            </div>
+                           
+                          
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="submit" value="Sign Up" class="btn btn-primary btn-block" />
+                                </div>
+                                <span class="sign-in">Already a member? <a href="LoginForCustomers.html">Sign In</a></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row text-center social">
+                        <div class="col-xs-12">
+                            <p class="alter">Sign Up with</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <div class="col-xs-4">
+                                    <a href="javascript:void(0)" class="btn btn-lg btn-facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a href="https://www.instagram.com/nubi_scvbby" class="btn btn-lg btn-twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a href="javascript:void(0)" class="btn btn-lg btn-google">
+                                        <i class="fab fa-google"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- global js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU%callback=myMap"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <!-- end of global js -->
+    <!-- begining of page level js -->
+    <!--<script src="vendors/moment/js/moment.min.js"></script>-->
+    <!--<script src="vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="vendors/select2/js/select2.js"></script>-->
+    <!--<script src="vendors/iCheck/js/icheck.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"> </script>
+
+    <script src="Scripts/register.js"></script>
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#submit').click(function () {
+                var customer = new Object();
+                customer.first_name = $("#first_name").val();
+                customer.last_name = $("#last_name").val();
+                customer.email = $("#email").val();
+                customer.first_name = $("#first_name").val();
+                customer.first_name = $("#first_name").val();
+
+
+
+
+
+
+            })
+
+
+
+
+
+        });
+    </script>
+    <!-- end of page level js -->
+</body>
+
+</html>
